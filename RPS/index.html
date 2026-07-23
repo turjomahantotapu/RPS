@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Paper Scissors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="top-row">
+    <div>
+      <h1>Rock Paper Scissors</h1>
+      <div class="subtitle">Pick your move — or press R / P / S</div>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <div class="mode-row">
+        <button class="mode-btn active" data-target="0">∞</button>
+        <button class="mode-btn" data-target="5">Bo5</button>
+        <button class="mode-btn" data-target="10">Bo10</button>
+      </div>
+      <button class="sound-btn" id="soundBtn">🔈</button>
+    </div>
+  </div>
+
+  <div class="choices-wrap">
+    <div class="choices">
+      <div style="text-align:center;">
+        <button class="choice-btn" data-choice="rock">✊</button>
+        <span class="choice-key">R</span>
+      </div>
+      <div style="text-align:center;">
+        <button class="choice-btn" data-choice="paper">✋</button>
+        <span class="choice-key">P</span>
+      </div>
+      <div style="text-align:center;">
+        <button class="choice-btn" data-choice="scissors">✌️</button>
+        <span class="choice-key">S</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="match-over-banner" id="matchOverBanner"></div>
+
+  <div class="stage" id="stage">
+    <div class="countdown-text">Make your move to begin</div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-box win"><div class="num" id="winCount">0</div><div class="lab">Wins</div></div>
+    <div class="score-box lose"><div class="num" id="loseCount">0</div><div class="lab">Losses</div></div>
+    <div class="score-box tie"><div class="num" id="tieCount">0</div><div class="lab">Ties</div></div>
+  </div>
+
+  <div class="history-row" id="historyRow"></div>
+
+  <div class="bottom-row">
+    <button class="reset-btn" id="resetBtn">Reset score</button>
+  </div>
+  <div class="target-note" id="targetNote"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
